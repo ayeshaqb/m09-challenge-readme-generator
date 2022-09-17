@@ -33,7 +33,7 @@ const questions = [
       'MIT License',
       'GNU General Public License v3.0',
       'Apache 2.0 License',
-      'BSD 3-Clause License'
+      'BSD 3-Clause License',
       'Not licensed.'
     ],
   },
