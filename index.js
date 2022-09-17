@@ -35,23 +35,23 @@ const questions = [
     default: 'License',
     message: 'Choose a license for your application.',
     choices: [
-      'MIT License',
-      'GNU General Public License v3.0',
-      'Apache 2.0 License',
-      'BSD 3-Clause License',
+      'MIT',
+      'GNU v3.0',
+      'Apache 2.0',
+      'BSD 3-Clause',
       'Not licensed.'
     ],
   },
   {
     type: 'input',
     name: 'contributing',
-    default: 'Contribution Guidelines',
+    default: 'Fork this repository.',
     message: 'How can other developers contribute to your application?'
   },
   {
     type: 'input',
     name: 'tests',
-    default: 'App Tests',
+    default: 'Not applicable or not developed yet.',
     message: 'Write tests for your application.'
   },
   {
