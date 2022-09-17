@@ -13,17 +13,17 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: 'Provide a short description explaining the what, why, and how of your project.'
+    message: 'Describe your project.'
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'What are the steps required to install your project?'
+    message: 'List installation instructions.'
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'Provide instructions and examples for using your application.'
+    message: 'Enter usage information.'
   },
   {
     type: 'list',
@@ -40,12 +40,12 @@ const questions = [
   {
     type: 'input',
     name: 'contributing',
-    message: 'Include guidelines for how other developers may contribute to your application.'
+    message: 'How can other developers contribute to your application?'
   },
   {
     type: 'input',
-    name: 'tests',
-    message: 'Describe the different tests that can be performed with your application.'
+    name: 'test',
+    message: 'How can we run a test for your application?'
   },
   {
     type: 'input',
@@ -60,12 +60,16 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) { 
+  fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log('Generating README.md file!')
+)};
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(writeToFile());
-}
+  inquirer.prompt(questions).then((answers) => 
+  writeToFile('README.md', generateMarkdown(answers))
+)};
 
 // Function call to initialize app
 init();
