@@ -46,7 +46,7 @@ ${data.usage}
 ${data.contributing}
 
 ## Questions 
-Please reach out at @${data.github} and/or ${data.email} with any questions!
+Please reach out on GitHub (@${data.github}) or via email (${data.email}) with any questions!
 
 `;
 }
