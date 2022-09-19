@@ -71,6 +71,8 @@ ${data.contributing}
 
 ## Tests
 
+${data.tests}
+
 ## Questions 
 
 Please reach out on GitHub (@${data.github}) or via email (${data.email}) with any questions!
